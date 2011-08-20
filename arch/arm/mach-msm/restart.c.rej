@@ -1,0 +1,11 @@
+--- arch/arm/mach-msm/restart.c	2011-07-20 10:13:21.000000000 +0400
++++ arch/arm/mach-msm/restart.c	2011-07-31 15:53:31.000000000 +0400
+@@ -196,7 +196,7 @@
+ }
+ 
+ /* It seems that modem would like to lock kernel before restarting the system. */
+-inline void soc_restart(char mode, const char *cmd)
++/* inline */ void soc_restart(char mode, const char *cmd)
+ {
+ 	lock_kernel();
+ 	arm_pm_restart(mode, cmd);

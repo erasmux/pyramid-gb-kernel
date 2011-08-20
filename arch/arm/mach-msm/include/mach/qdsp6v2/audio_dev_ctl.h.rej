@@ -1,0 +1,11 @@
+--- arch/arm/mach-msm/include/mach/qdsp6v2/audio_dev_ctl.h	2011-07-20 10:13:21.000000000 +0400
++++ arch/arm/mach-msm/include/mach/qdsp6v2/audio_dev_ctl.h	2011-08-12 13:24:29.000000000 +0400
+@@ -226,4 +226,8 @@
+ int msm_set_voice_mute(int dir, int mute);
+ int msm_get_voice_state(void);
+ void msm_set_voc_freq(int tx_freq, int rx_freq);
++
++int msm_enable_incall_recording(int popp_id, int rec_mode, int rate, int channel_mode);
++int msm_disable_incall_recording(uint32_t popp_id, uint32_t rec_mode);
++
+ #endif
